@@ -1,0 +1,17 @@
+﻿@model List<Categories>
+
+<div class="card rounded-bottom-0 mb-5  d-none d-lg-block">
+    <div class="card-header" style="font-size: 25px;">
+        Kategoriler
+    </div>
+    <div class="card-body">
+
+        @foreach (var datas in Model)
+        {
+            <a href="/kategoriler/@datas.Slug">@datas.CategoryName</a>
+             <hr />
+        }
+
+    </div>
+</div>
+

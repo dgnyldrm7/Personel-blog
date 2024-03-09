@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Hakkimda";
+}
+
+
+
+<div class="row">
+    <div class="col-lg-9">
+
+       
+            <div class="card rounded-bottom-0 mb-2 shadow-sm">
+                <div class="card-header" style="font-size: 25px;">
+                   Hakkımda
+                </div>
+                <div class="card-body">
+
+                <pre>
+    Merhaba,
+
+    Ben bir yazılım mühendisliği öğrencisiyim ve üçüncü sınıfta okuyorum. 
+    Odak noktam ASP.NET Core ve C# gibi web geliştirme teknolojileri üzerine. 
+    Web geliştirme alanında ilerlemekteyim ve backend geliştirme konusunda uzmanlaşmayı hedefliyorum.
+
+    Yazılım dünyasına olan ilgim çocukluğumdan beri var ve bu alanda kendimi sürekli geliştirmek için 
+    çaba harcıyorum. 
+    Üniversite eğitimim sırasında, ASP.NET Core ve C# gibi teknolojilerle çalışarak gerçek dünya projelerinde 
+    deneyim kazanıyorum.
+
+    Hedefim, güçlü bir backend geliştiricisi olmak ve karmaşık problemleri çözmek için yenilikçi çözümler 
+    sunmaktır. 
+    Ayrıca, teknolojik gelişmeleri yakından takip ediyor ve en son trendlere uyum sağlamak için kendimi sürekli 
+    güncelliyorum.
+
+    Dışarıda zaman geçirmeyi, yeni teknolojiler keşfetmeyi ve kod yazmayı seviyorum. 
+    Kendimi sürekli olarak geliştirmeye ve öğrenmeye adadım ve gelecekteki kariyerimde bu tutkumu ve
+    kararlılığımı
+    kullanmayı sabırsızlıkla bekliyorum.
+
+    İlginiz için teşekkür ederim.
+
+        </pre>
+
+                </div>
+            </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <!--Profile-Search Kodları buraya yazıldı-->
+        <div class="mb-2">
+            <form class="example d-none d-lg-block" action="action_page.php">
+                <input type="text" placeholder="Ara.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="card mb-2 d-none d-lg-block">
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-8 my-2">
+                        <img src="~/image/kullanmalik2.jpg" class="img-fluid rounded-circle profilFotom" alt="dgnyldrm.com">
+                    </div>
+                    <div class="col-8 my-2 text-center">
+                        <h5 class="text-center text-black"> Software Engineering </h5>
+                    </div>
+                    <div class="col-6 text-center my-2">
+
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://www.redkeynetwork.org/resources/Pictures/Linkedin-01.png" class="img-fluid" alt="github" />
+                            </div>
+                            <div class="col">
+                                <img src="https://gitlab.com/uploads/-/system/group/avatar/10532272/github.png" class="img-fluid" alt="github" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Menu Kodları buraya yazıldı-->
+        <vc:tag-menuler></vc:tag-menuler>
+        @await Component.InvokeAsync("TagMenuler")
+
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,91 @@
+﻿@model PostViewModel
+@{
+    ViewData["Title"] = "dgnyldrm.com";
+}
+
+<div class="row">
+    <!--Yazılar burada yer alıyor.-->
+    <div class="col-lg-9">
+
+        @foreach (var datas in Model.Yazilar)
+        {
+            <div class="card rounded-bottom-0 mb-2 shadow-sm">
+                <div class="card-header" style="font-size: 25px;">
+
+                    <a href="post/@datas.Slug"> @datas.Title </a>
+            </div>
+                <div class="card-body">
+
+                    <p>
+                        @datas.Content
+                    </p>
+                </div>
+            </div>
+
+        }
+
+
+
+        @if( Model.Yazilar.Any( x => x.IsActive ) == false )
+        {
+            <div class="container badge bg-danger text-white fs-5 text-center"> BU KATEGORİDE HENÜZ İÇERİK PAYLAŞILMAMIŞ</div>
+        }
+
+        
+       
+        
+
+
+
+
+        
+
+        
+
+    </div>
+
+    <div class="col-md-3">
+       
+        <!--Profile-Search Kodları buraya yazıldı-->
+        <div class="mb-2">
+            <form class="example d-none d-lg-block" action="action_page.php">
+                <input type="text" placeholder="Ara.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="card mb-2 d-none d-lg-block">
+            <div class="card-body">
+                <div class="row justify-content-center">
+                    <div class="col-8 my-2">
+                        <img src="~/image/kullanmalik2.jpg" class="img-fluid rounded-circle profilFotom" alt="dgnyldrm.com">
+                    </div>
+                    <div class="col-8 my-2 text-center">
+                        <h5 class="text-center text-black"> Software Engineering </h5>
+                    </div>
+                    <div class="col-6 text-center my-2">
+
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://www.redkeynetwork.org/resources/Pictures/Linkedin-01.png" class="img-fluid" alt="github" />
+                            </div>
+                            <div class="col">
+                                <img src="https://gitlab.com/uploads/-/system/group/avatar/10532272/github.png" class="img-fluid" alt="github" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Menu Kodları buraya yazıldı-->
+        <vc:tag-menuler></vc:tag-menuler>
+        @await Component.InvokeAsync("TagMenuler")
+       
+        
+    </div>
+</div>
+
+
+
